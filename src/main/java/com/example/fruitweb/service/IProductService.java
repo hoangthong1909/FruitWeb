@@ -12,6 +12,6 @@ public interface IProductService {
     Page<Product> findAllinPage(Pageable pageable);
     Product insert(Product product);
     Product update(Product product);
-    Product detele(Integer id);
+    Product delete(Integer id);
     Product findById(Integer id);
 }

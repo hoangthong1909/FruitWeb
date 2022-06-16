@@ -11,6 +11,6 @@ public interface ICategoryService {
     Page<Category> findAllinPage(Pageable pageable);
     Category insert(Category category);
     Category update(Category category);
-    Category detele(Integer id);
+    Category delete(Integer id);
     Category findById(Integer id);
 }

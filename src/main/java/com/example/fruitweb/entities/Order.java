@@ -1,9 +1,17 @@
 package com.example.fruitweb.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.Instant;
-
+import java.util.Date;
+import java.util.List;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "orders")
 public class Order {
@@ -12,9 +20,6 @@ public class Order {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "creator")
-    private Integer creator;
-
     @Column(name = "address", length = 100)
     private String address;
 
@@ -22,7 +27,7 @@ public class Order {
     private String phone;
 
     @Column(name = "create_date")
-    private Instant createDate;
+    private Date createDate;
 
     @Column(name = "status")
     private Integer status;
@@ -30,8 +35,16 @@ public class Order {
     @Column(name = "total", precision = 10)
     private BigDecimal total;
 
-    @Column(name = "discount_id")
-    private Integer discountId;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User userOrder;
+
+    @OneToMany(mappedBy = "order")
+    private List<OrdersDetail> orderdetails;
+
+    @ManyToOne
+    @JoinColumn(name = "discount_id")
+    private Discount discount;
 
 
 }

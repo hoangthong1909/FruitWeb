@@ -17,17 +17,17 @@ public class OrdersDetail {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "order_id")
-    private Integer orderId;
-
-    @Column(name = "product_id")
-    private Integer productId;
-
     @Column(name = "price", precision = 10)
     private BigDecimal price;
 
     @Column(name = "quantity")
     private Integer quantity;
 
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
 
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
 }

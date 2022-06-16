@@ -11,6 +11,6 @@ public interface IOrderDetailService {
     Page<OrdersDetail> findAllinPage(Pageable pageable);
     OrdersDetail insert(OrdersDetail ordersDetail);
     OrdersDetail update(OrdersDetail ordersDetail);
-    OrdersDetail detele(Integer id);
+    OrdersDetail delete(Integer id);
     OrdersDetail findById(Integer id);
 }

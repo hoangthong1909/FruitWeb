@@ -11,6 +11,6 @@ public interface IOrderService {
     Page<Order> findAllinPage(Pageable pageable);
     Order insert(Order order);
     Order update(Order order);
-    Order detele(Integer id);
+    Order delete(Integer id);
     Order findById(Integer id);
 }

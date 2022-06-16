@@ -11,6 +11,6 @@ public interface IDiscountService {
     Page<Discount> findAllinPage(Pageable pageable);
     Discount insert(Discount discount);
     Discount update(Discount discount);
-    Discount detele(Integer id);
+    Discount delete(Integer id);
     Discount findById(Integer id);
 }

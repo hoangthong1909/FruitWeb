@@ -11,6 +11,7 @@ public interface IUserService {
     Page<User> findAllinPage(Pageable pageable);
     User insert(User user);
     User update(User user);
-    User detele(Integer id);
+    User delete(Integer id);
     User findById(Integer id);
+    User findByEmail (String email);
 }

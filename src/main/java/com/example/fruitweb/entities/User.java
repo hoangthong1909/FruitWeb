@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,5 +36,7 @@ public class User {
     @Column(name = "email", length = 50)
     private String email;
 
+    @OneToMany(mappedBy = "userOrder")
+    private List<Order> orders;
 
 }

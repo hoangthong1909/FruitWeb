@@ -20,8 +20,9 @@ public class Product {
     @Column(name = "name", length = 50)
     private String name;
 
-    @Column(name = "category_id")
-    private Integer categoryId;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private  Category categoryId;
 
     @Column(name = "price", precision = 10)
     private BigDecimal price;
