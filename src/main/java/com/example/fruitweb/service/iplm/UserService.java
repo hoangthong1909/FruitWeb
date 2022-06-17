@@ -60,7 +60,7 @@ public class UserService implements IUserService {
 
     @Override
     public User findById(Integer id) {
-        return null;
+        return repository.findById(id).get();
     }
 
     @Override

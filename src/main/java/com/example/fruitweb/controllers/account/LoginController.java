@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpSession;
 
 @Controller
-public class LoginController {
+public class LoginController  {
     @Autowired
     private HttpSession session;
 

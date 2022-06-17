@@ -3,6 +3,7 @@ package com.example.fruitweb.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -14,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "orders")
+@Component
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
